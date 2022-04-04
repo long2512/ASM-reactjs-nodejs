@@ -3,7 +3,7 @@ import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import Products from './components/Products'
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-import { add, remove, update } from './api/products'
+import { add, list, remove, update } from './api/products'
 import { IProduct } from './types/products'
 import WebsiteLayout from './pages/layout/WebsiteLayout'
 import Home from './pages/Home'
@@ -28,8 +28,8 @@ function App() {
 
   useEffect(() => {
     const getProudcts = async () => {
-      const reponse = await fetch('http://localhost:3001/products');
-      const data = await reponse.json();
+      const {data} = await list();
+      // const data = await reponse.json();
       setProducts(data);
     }
     getProudcts()

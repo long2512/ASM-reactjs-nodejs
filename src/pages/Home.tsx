@@ -113,7 +113,7 @@ const Home = (props: ProductsListProps) => {
 
                   <div className="info-item ">
                     <img
-                      src={item.img}
+                      src={`${item.img}`}
                       className="w-full h-full"
                       alt=""
                     />
