@@ -15,7 +15,9 @@ import ProductAdd from './pages/AddProducts';
 import Header from './components/Header';
 import EditProduct from './pages/layout/EditProduct';
 // import Sigin from './pages/layout/Sigin';
-// import Sigup from './pages/layout/Sigup';
+import Signup from './pages/Signup';
+import Signin from './pages/Signin'
+// import Signin from './pages/Signin';
 import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'
@@ -59,10 +61,10 @@ function App() {
               <Route index element={<ProductsPage products={products}/>} />
               <Route path=':id' element={<ProductDetail />} />
             </Route>
-            {/* <Route path='sigin' element={<Sigin />} /> */}
-            {/* <Route path='sigup' element={<Sigup />} /> */}
             <Route path='about' element={<AboutPage/>} />
             <Route path='cart' element={<CartPage/>} />
+            <Route path="login" element={<Signin />} />
+            <Route path="register" element={<Signup />} />
           </Route>
           <Route path="*" element={<WebsiteLayout />} />
           <Route path="admin" element={<AdminLayout />}>

@@ -1,11 +1,13 @@
-import { TAuth } from "../types/auth";
+import { IUser } from "../types/auth";
 import instance from "./instance";
 
-export const sigin = (user:TAuth) => {
-    const url='/sigin';
-    return instance.post(url,user)
-}
-export const sigup = (user:TAuth) => {
-    const url='/sigup';
-    return instance.post(url,user)
-}
+export const registers = (user: IUser) => {
+  console.log(user);
+
+  const url = "/register";
+  return instance.post(url, user);
+};
+export const Signin = (user: IUser) => {
+  const url = "/login";
+  return instance.post(url, user);
+};

@@ -4,13 +4,13 @@
       "name": "Trà Xanh Đậu Đỏ",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRAXANHDAUDO.png",
       "price": "3000",
-      "id": 8
+      "id": 10
     },
     {
       "name": "Trà Thạch Vải",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/thumbs/270_crop_TRATHACHVAI_1.png",
       "price": "3000",
-      "id": 8
+      "id": 9
     },
     {
       "name": "Trà Sen Vàng",
@@ -22,32 +22,39 @@
       "name": "Trà Thạch Đào",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png",
       "price": "3000",
-      "id": 8
+      "id": 7
     },
     {
       "name": "Trà Xanh Đậu Đỏ",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRAXANHDAUDO.png",
       "price": "3000",
-      "id": 8
+      "id": 6
     },
     {
       "name": "Trà Thạch Vải",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/thumbs/270_crop_TRATHACHVAI_1.png",
       "price": "3000",
-      "id": 8
+      "id": 5
     },
     {
       "name": "Trà Sen Vàng",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/TRASENVANG.png",
       "price": "3000",
-      "id": 8
+      "id": 4
     },
     {
       "name": "Trà Thạch Đào",
       "img": "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRATHACHDAO.png",
       "price": "3000",
-      "id": 8
+      "id": 3
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "long@gmail.com",
+      "password": "$2a$10$5y8ddbqG6Bw0phBUTQJwDOR3F.d0O0/QNfVN.RHniIKhbt1T0cb7W",
+      "name": "long123",
+      "id": 1
+    }
+  ]
 }
