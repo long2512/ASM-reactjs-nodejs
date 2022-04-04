@@ -45,7 +45,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="mt-4 pr-10">
+          {/* <div className="mt-4 pr-10">
             <span className="relative ">
               <i className="fa-solid fa-cart-shopping text-2xl text-black"></i>
 
@@ -53,7 +53,7 @@ const Header = () => {
                 9
               </span>
             </span>
-          </div>
+          </div> */}
         </div>
       </nav>
 
