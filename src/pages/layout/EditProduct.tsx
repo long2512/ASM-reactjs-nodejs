@@ -32,25 +32,25 @@ const EditProduct = (props: ProductsProps) => {
   }
   return (
     <div>
-      <h2 className='text-2xl font-[600] text-center py-5'>Sửa sản phẩm</h2>
-            <form className="mt-8 space-y-6 w-3/5 mx-auto"onSubmit={handleSubmit(onSubmit)}>
+      <h2 className='text-2xl font-[600] py-5 ml-[20px]'>Sửa Sản Phẩm</h2>
+      <form className=" mt-8 space-y-6 w-3/5 ml-[20px]"onSubmit={handleSubmit(onSubmit)}>
                 <div className="rounded-md shadow-sm -space-y-px">
                     <div>
                         <label className="sr-only">Tên sản phẩm</label>
-                        <input type="text" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Tên sản phẩm" {...register('name', { required: true })} />
+                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Tên sản phẩm" {...register('name')} />
                     </div>
                     <div>
                         <label className="sr-only">Ảnh sản phẩm</label>
-                        <input type="text" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Ảnh sản phẩm (url)" {...register('img', { required: true })}  />
+                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Ảnh sản phẩm (url)" {...register('img')} />
                     </div>
                     <div>
                         <label className="sr-only">Giá sản phẩm</label>
-                        <input type="number" className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Giá sản phẩm" {...register('price')}/>
+                        <input type="number" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Giá sản phẩm" {...register('price')}/>
                     </div>
                 </div>
                 <div>
-                    <button type="submit" className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Thêm
+                    <button type="submit" className="bg-blue-600 p-3 text-white w-2/3">
+                        UPDATE
                     </button>
                 </div>
             </form>

@@ -47,9 +47,9 @@ const Header = () => {
 
           <div className="mt-4 pr-10">
             <span className="relative ">
-              <i className="fa-solid fa-cart-shopping text-2xl text-[#000]"></i>
+              <i className="fa-solid fa-cart-shopping text-2xl text-black"></i>
 
-              <span className="inline-flex absolute  items-center top-[-13px] right-[-20px] justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-white  bg-red-600 rounded-full">
+              <span className="inline-flex absolute  items-center top-[-13px] right-[-20px] justify-center px-2 py-1 mr-2 text-xs font-bold leading-none text-black  bg-red-600 rounded-full">
                 9
               </span>
             </span>
