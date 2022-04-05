@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { registers } from "../api/auth";
+import { signin } from "../api/auth";
 type SigninProps = {
   name: string;
   onSign: (user: TypeFormSign) => void;
@@ -19,7 +19,7 @@ const Signin = (props: SigninProps) => {
   } = useForm<TypeFormSign>();
   const navigate = useNavigate();
   const onSign: SubmitHandler<TypeFormSign> = (data) => {
-    registers(data);
+    signin(data);
     navigate("/signin");
   };
   return (

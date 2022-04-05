@@ -108,7 +108,7 @@ const Home = (props: ProductsListProps) => {
           {/* ==================== */}
           {props.products.map((item) => {
             return <div className="relative  pt-10 overlay">
-              <Link to={`/products/${item.id}`}>
+              <Link to={`/products/${item._id}`}>
                 <div className="relative  product-item  text-center">
 
                   <div className="info-item ">

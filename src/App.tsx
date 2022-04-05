@@ -12,7 +12,6 @@ import AdminLayout from './pages/layout/AdminLayout'
 import Dashboard from './pages/Dashboard'
 import ProductManager from './pages/ProductsManager'
 import ProductAdd from './pages/AddProducts';
-import Header from './components/Header';
 import EditProduct from './pages/layout/EditProduct';
 // import Sigin from './pages/layout/Sigin';
 import Signup from './pages/Signup';
@@ -39,7 +38,7 @@ function App() {
     //call api
     remove(id);
     //rêRender
-    setProducts(products.filter(item => item.id !== id))
+    setProducts(products.filter(item => item._id !== id))
   }
 
   const onHandleAdd = async (product: IProduct) => {
@@ -50,7 +49,7 @@ function App() {
   const onHnadleUpdate = async (product: IProduct) => {
     const { data } = await update(product);
     console.log(data);
-    setProducts(products.map(item => item.id == data.id ? data : item));
+    setProducts(products.map(item => item._id == data._id ? data : item));
   }
   return (
     <div className="App font-mono">
