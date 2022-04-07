@@ -37,6 +37,11 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
+                <NavLink to='/admin/products' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
+                  ADMIN
+                </NavLink>
+              </li>
+              <li className="hover:text-[#b97c5e] text-2xl">
                 <NavLink to='/login' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
                   SIGNIN
                 </NavLink>

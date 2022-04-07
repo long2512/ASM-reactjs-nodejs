@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { IProduct } from '../types/products'
 import ListProducts from './ListProducts'
+import NumberFormat from 'react-number-format';
 
 type ProductsListProps = {
   products: IProduct[],
@@ -121,8 +122,12 @@ const Home = (props: ProductsListProps) => {
 
                   <div className="">
                     <h2 className="text-2xl font-serif pb-2  pt-3">{item.name}</h2>
-                    <span className="font-medium text-xl text-[#b97c5e] font-bold">Giá:
-                      {item.price} đ{" "}
+                    <span> 
+                      <NumberFormat className="font-medium text-xl text-[#b97c5e] font-bold text-center"
+                        thousandSeparator={true}
+                        value={item.price}
+                        prefix="Giá: "
+                      />
                     </span>
                   </div>
                 </div>

@@ -23,7 +23,7 @@ export const read = (id: string | undefined) => {
 
 export const add = (product:IProduct) => {
     const url = "/products";
-    return instance.post(url,product);
+    return instance.post(url,product,);
 }
 
 export const update = (product:IProduct) => {

@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { signin } from "../api/auth";
 
 type SigninProps = {
-  name: string;
   onSign: (user: TypeFormSign) => void;
 };
-type TypeFormSign = {
+export type TypeFormSign = {
   name: string;
   email: string;
   password: number;

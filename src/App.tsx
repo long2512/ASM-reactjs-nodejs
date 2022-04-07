@@ -15,7 +15,7 @@ import ProductAdd from './pages/AddProducts';
 import EditProduct from './pages/layout/EditProduct';
 
 import Signup from './pages/Signup';
-import Signin from './pages/Signin'
+import Signin, { TypeFormSign } from './pages/Signin'
 
 import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
@@ -51,6 +51,11 @@ function App() {
     console.log(data);
     setProducts(products.map(item => item._id == data._id ? data : item));
   }
+
+  // const onHandleSigin = async (user:TypeFormSign) => {
+  //   const { data } = await signin(user);
+  //   localStorage.setItem('user', JSON.stringify(user))
+  // } 
   return (
     <div className="App font-mono">
         <Routes>
