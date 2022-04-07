@@ -36,10 +36,10 @@ const ProductsPage = (props: Productsprops) => {
               return <div className=' w-5/6 mx-auto'>
 
                 <div className='products border-2 border-solid p-3 text-center my-8'>
-                  <Link to={`/products/${item.id}`}>
+                  <Link to={`/products/${item._id}`}>
                     <img src={`${item.img}`} width='400' alt="" />
                     <h2 className='font-[600] text-2xl py-3'>{item.name}</h2>
-                    <span className='text-red-600 text-xl py-3'>{item.price}</span>
+                    <span className='text-red-600 text-xl py-3'>Giá: {item.price} đ</span>
                   </Link>
                 </div>
               </div>

@@ -13,10 +13,10 @@ import Dashboard from './pages/Dashboard'
 import ProductManager from './pages/ProductsManager'
 import ProductAdd from './pages/AddProducts';
 import EditProduct from './pages/layout/EditProduct';
-// import Sigin from './pages/layout/Sigin';
+
 import Signup from './pages/Signup';
 import Signin from './pages/Signin'
-// import Signin from './pages/Signin';
+
 import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'

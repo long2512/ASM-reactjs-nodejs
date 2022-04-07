@@ -117,7 +117,6 @@ const Home = (props: ProductsListProps) => {
                       className="w-full h-full"
                       alt=""
                     />
-
                   </div>
 
                   <div className="">
