@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 type Props = {}
 
 const CartPage = (props: Props) => {
+    const [ count, setCount ] = useState(0);
+
     return (
         <div className='py-24'>
             <table className='text-center mx-auto border-2 text-xl '>
@@ -23,9 +25,9 @@ const CartPage = (props: Props) => {
                         <td className='p-8'>1</td>
                         <td className='p-8'><img src="https://uicookies.com/demo/theme/resto/img/img_1.jpg" width='80' className='mx-auto' alt="" /></td>
                         <td className='p-8'>1</td> 
-                        <td className='p-8'><button className='rounded-full bg-[#ccc] py-2 px-3 text-xl text-white'>-</button></td>
-                        <td className='p-8'>1</td>
-                        <td className='p-8'><button className='rounded-full bg-[#ccc] py-2 px-3 text-xl text-white'>+</button></td>
+                        <td className='p-8'><button onClick={()=>setCount(count - 1)} className='rounded-full bg-[#ccc] py-2 px-3 text-xl text-white'>-</button></td>
+                        <td className='p-8'>{count}</td>
+                        <td className='p-8'><button onClick={()=>setCount(count + 1)} className='rounded-full bg-[#ccc] py-2 px-3 text-xl text-white'>+</button></td>
                         <td className='p-8'>Xóa</td>
                         <td className='p-8'>1000đ</td>
                     </tr>
