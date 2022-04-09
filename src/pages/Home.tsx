@@ -100,15 +100,15 @@ const Home = (props: ProductsListProps) => {
                   <div className="info-item ">
                     <img
                       src={`${item.img}`}
-                      className="w-full h-full"
+                      className="w-full h-full hover:scale-105 ease-in-out duration-300 ..."
                       alt=""
                     />
                   </div>
 
                   <div className="">
-                    <h2 className="text-2xl font-serif pb-2  pt-3">{item.name}</h2>
+                    <h2 className="font-sans text-2xl font-serif pb-2  pt-3">{item.name}</h2>
                     <span> 
-                      <NumberFormat className="font-medium text-xl text-[#b97c5e] font-bold text-center"
+                      <NumberFormat className="font-sans font-medium text-xl text-[#b97c5e] font-bold text-center"
                         thousandSeparator={true}
                         value={item.price}
                         prefix="Giá: "

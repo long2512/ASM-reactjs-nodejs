@@ -1,4 +1,5 @@
 import React from 'react'
+import NumberFormat from 'react-number-format';
 import { Link, NavLink } from 'react-router-dom'
 import { IProduct } from '../types/products'
 
@@ -37,10 +38,17 @@ const ProductsPage = (props: Productsprops) => {
 
                 <div className='products border-2 border-solid p-3 text-center my-8'>
                   <Link to={`/products/${item._id}`}>
-                    <img src={`${item.img}`} width='400' alt="" />
-                    <h2 className='font-[600] text-2xl py-3'>{item.name}</h2>
-                    <span className='text-red-600 text-xl py-3'>Giá: {item.price} đ</span>
+                    <img className='hover:scale-105 ease-in-out duration-300 ...' src={`${item.img}`} width='400' alt="" />
+                    <h2 className='font-sans font-[600] text-2xl py-3'>{item.name}</h2>
+                    <span>
+                      <NumberFormat className='font-sans font-bold text-red-600 text-center text-xl py-3'
+                        thousandSeparator={true}
+                        value={item.price}
+                        prefix="Giá: "
+                      />
+                    </span>
                   </Link>
+                  
                 </div>
               </div>
             })

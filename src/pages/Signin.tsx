@@ -34,31 +34,28 @@ const Signin = (props: SigninProps) => {
         onSubmit={handleSubmit(onSign)}
       >
         <div className="mb-3 mt-[50px]">
-          <label htmlFor="exampleInputEmail1" className="form-label">
-            Email address
-          </label>
           <input
             type="email"
-            className="form-control"
+            className="border-2 p-2 w-[500px] border-gray-500"
+            placeholder="Email Address"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             {...register("email")}
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
-            Password
-          </label>
+          
           <input
             type="password"
-            className="form-control"
+            className="border-2 p-2 w-[500px] border-gray-500"
+            placeholder="Password"
             id="exampleInputPassword1"
             {...register("password")}
           />
         </div>
         <button
           type="submit"
-          className="btn btn-primary px-5 py-3 bg-[#b97c5e] hover:bg-[#b96c4e] border-0"
+          className="btn btn-primary px-5 py-3 bg-[#b97c5e] hover:bg-[#b96c4e] border-0 text-white w-[500px]"
         >
           SIGNIN
         </button>

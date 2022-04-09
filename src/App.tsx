@@ -4,7 +4,7 @@ import Products from './components/Products'
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import { add, list, remove, update } from './api/products';
-// import { list as listposst } from './api/post';
+
 
 import { IProduct } from './types/products'
 import WebsiteLayout from './pages/layout/WebsiteLayout'
@@ -23,6 +23,7 @@ import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'
 import { Ipost } from './types/post'
+import { listpost } from './api/post';
 
 function App() {
   // const [products,setProducts] = useState<IProduct>(data)
@@ -41,7 +42,7 @@ function App() {
 
   // useEffect(() => {
   //   const getPosts = async () => {
-  //     const {data} = await listposst();
+  //     const {data} = await listpost();
       
   //     setPosts(data);
   //   }
@@ -79,6 +80,7 @@ function App() {
               <Route index element={<ProductsPage products={products}/>} />
               <Route path=':id' element={<ProductDetail />} />
             </Route>
+            
             <Route path='about' element={<AboutPage/>} />
             <Route path='cart' element={<CartPage/>} />
             <Route path="login" element={<Signin />} />

@@ -17,38 +17,38 @@ const Header = () => {
           <div className="menu top-0">
             <ul className="flex text-sm text-black">
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  HOME
+                <NavLink to='/' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Home
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/about' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  ABOUT
+                <NavLink to='/about' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  About
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/products' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  SHOP
+                <NavLink to='/products' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Shop
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/contact' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  CONTACT
+                <NavLink to='/contact' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Contact
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/admin/products' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  ADMIN
+                <NavLink to='/admin/products' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Admin
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/login' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  SIGNIN
+                <NavLink to='/login' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Signin
                 </NavLink>
               </li>
               <li className="hover:text-[#b97c5e] text-2xl">
-                <NavLink to='/register' className="block py-4 px-4  font-medium hover:text-[#B97C5E];">
-                  SIGNUP
+                <NavLink to='/register' className="block py-4 px-4  font-sans hover:text-[#B97C5E];">
+                  Signup
                 </NavLink>
               </li>
             </ul>
