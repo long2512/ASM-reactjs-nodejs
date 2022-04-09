@@ -85,28 +85,13 @@ const Home = (props: ProductsListProps) => {
       </div>
 
 
-      {/* <div className="bg-banner-email pt-[100px] pb-[200px] bg-cover bg-center bg-no-repeat">
-        <h1 className="font-medium te text-orange-600 text-5xl text-center pt-20">
-          Subscribe Hiland Coffee
-        </h1> */}
-      {/* <form className="text-center pt-10" action="">
-          <input
-            type="text"
-            name=""
-            placeholder="E-mail Adress"
-            className="pr-32 pl-3 text-white py-3 bg-transparent border border-inherit outline-0"
-          />
-          <button className="bg-white text-sm text-black px-10 py-[18px] border bg-white ">
-            SUBSCRIBE
-          </button>
-        </form> */}
-      {/* </div> */}
+      
 
       <div className="">
         <h1 className="font-serif text-6xl text-center pt-36">
           All Products
         </h1><div className="grid grid-cols-4 max-w-6xl mx-auto gap-5">
-          {/* ==================== */}
+          
           {props.products.map((item) => {
             return <div className="relative  pt-10 overlay">
               <Link to={`/products/${item._id}`}>

@@ -3,7 +3,9 @@ import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 import Products from './components/Products'
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-import { add, list, remove, update } from './api/products'
+import { add, list, remove, update } from './api/products';
+// import { list as listposst } from './api/post';
+
 import { IProduct } from './types/products'
 import WebsiteLayout from './pages/layout/WebsiteLayout'
 import Home from './pages/Home'
@@ -20,6 +22,7 @@ import Signin, { TypeFormSign } from './pages/Signin'
 import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'
+import { Ipost } from './types/post'
 
 function App() {
   // const [products,setProducts] = useState<IProduct>(data)
@@ -33,6 +36,17 @@ function App() {
     }
     getProudcts()
   }, [])
+
+  // const [posts, setPosts] = useState<Ipost[]>([])
+
+  // useEffect(() => {
+  //   const getPosts = async () => {
+  //     const {data} = await listposst();
+      
+  //     setPosts(data);
+  //   }
+  //   getPosts()
+  // }, [])
 
   const removeItem = (id: number) => {
     //call api
