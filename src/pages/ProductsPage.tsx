@@ -1,13 +1,16 @@
 import React from 'react'
 import NumberFormat from 'react-number-format';
 import { Link, NavLink } from 'react-router-dom'
+import { TCate } from '../types/cate';
 import { IProduct } from '../types/products'
 
 type Productsprops = {
   products: IProduct[];
+  categories:TCate[];
 }
 
 const ProductsPage = (props: Productsprops) => {
+  console.log(props.categories)
   return (
     <div>
       <h2 className='text-center text-5xl py-16 font-[600]'>Products Page</h2>
@@ -18,16 +21,14 @@ const ProductsPage = (props: Productsprops) => {
               <input type="text" placeholder='Search Products ' className='p-2 border-2 rounded-xl outline-none' />
             </form>
             <ul className='mt-12 p-8'>
-              <li className='text-2xl font-[600] mb-8'>Danh mục </li>
-              <li className='py-2 hover:text-[#888] text-center'>
-                <NavLink to='#'>danh muc 1</NavLink>
+              
+              {props.categories.map(item=>{
+                return <li className='py-2 hover:text-[#888] text-center'>
+                <NavLink to='#'>{item.name}</NavLink>
               </li>
-              <li className='py-2 hover:text-[#888] text-center'>
-                <NavLink to='#'>danh muc 1</NavLink>
-              </li>
-              <li className='py-2 hover:text-[#888] text-center'>
-                <NavLink to='#'>danh muc 1</NavLink>
-              </li>
+              })}
+              
+              
             </ul>
           </div>
         </div>

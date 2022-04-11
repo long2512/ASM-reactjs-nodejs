@@ -23,19 +23,27 @@ import { AboutPage } from './pages/AboutPage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'
 import { Ipost } from './types/post'
-import { listpost } from './api/post';
+import { listCate } from './api/cate';
+import { TCate } from './types/cate';
+// import { listpost } from './api/post';
 
 function App() {
   // const [products,setProducts] = useState<IProduct>(data)
   const [products, setProducts] = useState<IProduct[]>([])
+  const [categories, setCategories] = useState<TCate[]>([]);
 
   useEffect(() => {
     const getProudcts = async () => {
-      const {data} = await list();
+      const { data } = await list();
       // const data = await reponse.json();
       setProducts(data);
     }
     getProudcts()
+    const getCate = async () => {
+      const { data } = await listCate();
+      setCategories(data);
+    }
+    getCate()
   }, [])
 
   // const [posts, setPosts] = useState<Ipost[]>([])
@@ -43,7 +51,7 @@ function App() {
   // useEffect(() => {
   //   const getPosts = async () => {
   //     const {data} = await listpost();
-      
+
   //     setPosts(data);
   //   }
   //   getPosts()
@@ -73,30 +81,30 @@ function App() {
   // } 
   return (
     <div className="App font-mono">
-        <Routes>
-          <Route path="/" element={<WebsiteLayout />}>
-            <Route index element={<Home products={products} />} />
-            <Route path='products'>
-              <Route index element={<ProductsPage products={products}/>} />
-              <Route path=':id' element={<ProductDetail />} />
-            </Route>
-            
-            <Route path='about' element={<AboutPage/>} />
-            <Route path='cart' element={<CartPage/>} />
-            <Route path="login" element={<Signin />} />
-            <Route path="register" element={<Signup />} />
+      <Routes>
+        <Route path="/" element={<WebsiteLayout />}>
+          <Route index element={<Home products={products} />} />
+          <Route path='products'>
+            <Route index element={<ProductsPage categories={categories} products={products} />} />
+            <Route path=':id' element={<ProductDetail />} />
           </Route>
-          <Route path="*" element={<WebsiteLayout />} />
-          <Route path="admin" element={<AdminLayout />}>
-            <Route index element={<Navigate to="dashboard" />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="products">
-              <Route index element={<ProductManager onRemove={removeItem} products={products} />} />
-              <Route path="add" element={<ProductAdd onAdd={onHandleAdd} />} />
-              <Route path=":id/edit" element={<EditProduct onUpdate={onHnadleUpdate} />} />
-            </Route>
+
+          <Route path='about' element={<AboutPage />} />
+          <Route path='cart' element={<CartPage />} />
+          <Route path="login" element={<Signin />} />
+          <Route path="register" element={<Signup />} />
+        </Route>
+        <Route path="*" element={<WebsiteLayout />} />
+        <Route path="admin" element={<AdminLayout />}>
+          <Route index element={<Navigate to="dashboard" />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="products">
+            <Route index element={<ProductManager onRemove={removeItem} products={products} />} />
+            <Route path="add" element={<ProductAdd onAdd={onHandleAdd} />} />
+            <Route path=":id/edit" element={<EditProduct onUpdate={onHnadleUpdate} />} />
           </Route>
-        </Routes>
+        </Route>
+      </Routes>
     </div>
   )
 }

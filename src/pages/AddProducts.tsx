@@ -1,7 +1,6 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { IProduct } from '../types/products';
 import { useNavigate } from 'react-router-dom';
-
 type ProductAddProps = {
     onAdd: (product: IProduct) => void
 }
@@ -18,6 +17,8 @@ const ProductAdd = (props: ProductAddProps) => {
         props.onAdd(data)
         Navigate('/admin/products')
     }
+
+    
     return (
         <div>
             <h2 className='text-2xl font-[600] py-5 ml-[20px]'>Thêm Sản Phẩm</h2>
