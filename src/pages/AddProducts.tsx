@@ -1,13 +1,16 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { IProduct } from '../types/products';
 import { useNavigate } from 'react-router-dom';
+import { TCate } from '../types/cate';
 type ProductAddProps = {
     onAdd: (product: IProduct) => void
+    categories: TCate[];
 }
 type TInputs = {
     name: String,
     price: number,
-    img:String
+    img:String,
+    category:string
 }
 
 const ProductAdd = (props: ProductAddProps) => {
@@ -31,6 +34,13 @@ const ProductAdd = (props: ProductAddProps) => {
                     <div>
                         <label className="sr-only">Ảnh sản phẩm</label>
                         <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Ảnh sản phẩm (url)" {...register('img')} />
+                    </div>
+                    <div>
+                       <select className='p-2 mb-3 mt-[20px] border border-gray-600 w-2/3'{...register('category')}>
+                           {props.categories.map((item)=>{
+                               return <option  value={`${item._id}`} key={item._id}>{item.name}</option>
+                           })}
+                       </select>
                     </div>
                     <div>
                         <label className="sr-only">Giá sản phẩm</label>
