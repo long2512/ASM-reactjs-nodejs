@@ -2,15 +2,18 @@ import { useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import { read } from '../../api/products';
+import { TCate } from '../../types/cate';
 import { IProduct } from '../../types/products';
 
 type ProductsProps = {
   onUpdate: (product : IProduct) => void
+  categories: TCate[];
 }
 type FormInput = {
   name: String,
   price: number,
-  img:String
+  img:String,
+  category:string
 }
 const EditProduct = (props: ProductsProps) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormInput>();
@@ -37,15 +40,22 @@ const EditProduct = (props: ProductsProps) => {
                 <div className="rounded-md shadow-sm -space-y-px">
                     <div>
                         <label className="sr-only">Tên sản phẩm</label>
-                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Tên sản phẩm" {...register('name')} />
+                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Tên sản phẩm" {...register('name',{required:true})} />
                     </div>
                     <div>
                         <label className="sr-only">Ảnh sản phẩm</label>
-                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Ảnh sản phẩm (url)" {...register('img')} />
+                        <input type="text" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Ảnh sản phẩm (url)" {...register('img',{required:true})} />
+                    </div>
+                    <div>
+                       <select className='p-2 mb-3 mt-[20px] border border-gray-600 w-2/3'{...register('category')}>
+                           {props.categories.map((item)=>{
+                               return <option  value={`${item._id}`} key={item._id}>{item.name}</option>
+                           })}
+                       </select>
                     </div>
                     <div>
                         <label className="sr-only">Giá sản phẩm</label>
-                        <input type="number" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Giá sản phẩm" {...register('price')}/>
+                        <input type="number" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Giá sản phẩm" {...register('price',{required:true})}/>
                     </div>
                 </div>
                 <div>
