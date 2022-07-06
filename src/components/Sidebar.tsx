@@ -6,27 +6,7 @@ type Props = {}
 const Sidebar = (props: Props) => {
   return (
     <div>
-      {/* <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div className="position-sticky pt-3">
-          <ul className="nav flex-column">
-            <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="">
-                Dashboard
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="">
-                Product
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/admin/products/add">
-                Add Products
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </nav> */}
+      
 
       <div className="hidden md:block">
         <div className="ml-10 flex items-baseline space-x-4">

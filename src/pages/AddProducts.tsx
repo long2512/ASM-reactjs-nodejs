@@ -2,6 +2,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { IProduct } from '../types/products';
 import { useNavigate } from 'react-router-dom';
 import { TCate } from '../types/cate';
+
 type ProductAddProps = {
     onAdd: (product: IProduct) => void
     categories: TCate[];
@@ -21,7 +22,6 @@ const ProductAdd = (props: ProductAddProps) => {
         Navigate('/admin/products')
     }
 
-    
     return (
         <div>
             <h2 className='text-2xl font-[600] py-5 ml-[20px]'>Thêm Sản Phẩm</h2>
@@ -46,6 +46,7 @@ const ProductAdd = (props: ProductAddProps) => {
                         <label className="sr-only">Giá sản phẩm</label>
                         <input type="number" className="p-2 mb-3 mt-[20px] border border-gray-600 w-2/3" placeholder="Giá sản phẩm" {...register('price',{required:true})}/>
                     </div>
+                    
                 </div>
                 <div>
                     <button type="submit" className="bg-blue-600 p-3 text-white w-2/3">
